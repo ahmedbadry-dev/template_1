@@ -3,8 +3,6 @@
 
 .page {
     section.services {
-        @include section-padding;
-
         h2.special-heading {
             color: $color-gray;
             font-size: 70px;

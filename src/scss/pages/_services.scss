@@ -1,0 +1,121 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.services {
+
+        .container {
+            .row {
+                padding-top: 80px;
+
+                .services-cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 40px;
+
+                    .s-card {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-bottom: 30px;
+                        padding: 0 20px;
+
+                        i {
+                            flex-basis: 30px;
+                            color: $color-primary;
+                            font-size: 20px;
+                        }
+
+                        .s-info {
+                            text-align: center;
+
+                            h3 {
+                                color: $text-dark;
+                                font-size: 1rem;
+                                margin-bottom: 10px;
+                            }
+
+                            p {
+                                font-size: $fs-xs;
+                                min-width: 200px;
+                            }
+                        }
+                    }
+
+                    @include respond("md") {
+                        .s-card {
+                            flex-direction: row;
+                            align-items: flex-start;
+                            margin-bottom: 50px;
+
+                            i {
+                                font-size: 25px;
+                            }
+
+                            .s-info {
+                                text-align: justify;
+                                padding-left: 25px;
+
+                                p {
+                                    // width: 250px;
+                                }
+                            }
+                        }
+                    }
+
+
+                    @include respond("lg") {
+                        .s-card {
+                            margin-bottom: 20px;
+
+                            i {
+                                font-size: 25px;
+                            }
+
+                            .s-info {
+                                text-align: justify;
+                                padding-left: 25px;
+
+                                p {
+                                    // width: 250px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                figure {
+                    display: none;
+                    position: relative;
+
+                    img {
+                        height: 70%;
+                        border-radius: $radius-sm;
+                        -webkit-border-radius: $radius-sm;
+                        -moz-border-radius: $radius-sm;
+                        -ms-border-radius: $radius-sm;
+                        -o-border-radius: $radius-sm;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        border-left: 70px solid $color-dark;
+                        top: 0;
+                        right: -15px;
+                        z-index: -1;
+                    }
+
+
+                    @include respond("lg") {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+}
