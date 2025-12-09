@@ -39,7 +39,7 @@ h4 {
 
 p {
   font-size: 1rem;
-  color: #6b7280;
+  color: #A1A5A3;
   line-height: 1.7;
 }
 
@@ -440,4 +440,22 @@ img {
   .col-xl-12 {
     width: 100%;
   }
+}
+.page section.landing {
+  background-image: url(/src/assets/images/hero/m16.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 70px);
+}
+.page section.landing .intro-text {
+  flex-direction: column;
+  color: #34BCAC;
+}
+.page section.landing .intro-text h1 {
+  margin-bottom: 10px;
+}
+.page section.landing .intro-text p {
+  width: 320px;
+  text-align: center;
+  color: #A1A5A3;
 }
