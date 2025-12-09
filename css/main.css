@@ -137,6 +137,73 @@ img {
   display: block;
 }
 
+.page .container header {
+  height: 70px;
+}
+.page .container header figure img {
+  width: 40px;
+}
+.page .container header nav {
+  position: relative;
+}
+.page .container header nav i {
+  cursor: pointer;
+}
+.page .container header nav:hover ul {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.page .container header nav ul {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 300px;
+  background-color: #eee;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(40px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.page .container header nav ul::before {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  top: -20px;
+  right: 5px;
+  border-bottom-color: #eee;
+}
+.page .container header nav ul li {
+  padding: 0.5rem 0;
+  transition: padding 0.3s;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  cursor: pointer;
+}
+.page .container header nav ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+.page .container header nav ul li:hover {
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .page .container header nav ul {
+    width: 500px;
+  }
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
