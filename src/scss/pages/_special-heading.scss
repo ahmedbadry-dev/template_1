@@ -1,0 +1,39 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.services {
+        @include section-padding;
+
+        h2.special-heading {
+            color: $color-gray;
+            font-size: 70px;
+            font-weight: $fw-bold;
+            letter-spacing: -4px;
+
+            &+p {
+                color: $text-dark;
+                margin-top: -45px;
+                font-size: $fs-xs;
+            }
+
+            @include respond("md") {
+                font-size: 100px;
+
+                &+p {
+                    margin-top: -65px;
+                    font-size: $fs-sm;
+                }
+            }
+
+            @include respond("lg") {
+                font-size: 130px;
+
+                &+p {
+                    margin-top: -80px;
+                    font-size: $fs-md;
+                }
+            }
+        }
+    }
+}

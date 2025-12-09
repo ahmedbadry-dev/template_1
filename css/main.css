@@ -506,3 +506,41 @@ img {
     flex-wrap: wrap;
   }
 }
+
+.page section.services {
+  padding-block: 5rem;
+}
+@media (min-width: 768px) {
+  .page section.services {
+    padding-block: 3rem;
+  }
+}
+.page section.services h2.special-heading {
+  color: #E8ECEB;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+.page section.services h2.special-heading + p {
+  color: #111827;
+  margin-top: -45px;
+  font-size: 0.75rem;
+}
+@media (min-width: 768px) {
+  .page section.services h2.special-heading {
+    font-size: 100px;
+  }
+  .page section.services h2.special-heading + p {
+    margin-top: -65px;
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 992px) {
+  .page section.services h2.special-heading {
+    font-size: 130px;
+  }
+  .page section.services h2.special-heading + p {
+    margin-top: -80px;
+    font-size: 1.125rem;
+  }
+}
