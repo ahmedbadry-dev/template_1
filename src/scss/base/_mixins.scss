@@ -4,25 +4,25 @@
 // Responsive Mixin
 // ================================
 @mixin respond($breakpoint) {
-    @if $breakpoint ==sm {
+    @if $breakpoint =="sm" {
         @media (min-width: $bp-sm) {
             @content;
         }
     }
 
-    @else if $breakpoint ==md {
+    @else if $breakpoint =="md" {
         @media (min-width: $bp-md) {
             @content;
         }
     }
 
-    @else if $breakpoint ==lg {
+    @else if $breakpoint =="lg" {
         @media (min-width: $bp-lg) {
             @content;
         }
     }
 
-    @else if $breakpoint ==xl {
+    @else if $breakpoint =="xl" {
         @media (min-width: $bp-xl) {
             @content;
         }
@@ -91,5 +91,17 @@
 
     @include respond(md) {
         padding-block: $space-lg;
+    }
+}
+
+
+// ================================
+// Responsive Font Mixin
+// ================================
+@mixin font-responsive($font-sm, $font-lg) {
+    font-size: $font-sm;
+
+    @include respond("md") {
+        font-size: $font-lg;
     }
 }

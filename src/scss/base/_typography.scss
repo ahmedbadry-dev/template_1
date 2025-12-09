@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+
+// Font scale
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-md: 1.125rem;
+$fs-lg: 1.5rem;
+$fs-xl: 2rem;
+$fs-xxl: 3rem;
+
+
+// ================================
+// Heading Styles
+// ================================
+h1 {
+    @include font-responsive(2rem, 3rem);
+    font-weight: $fw-bold;
+}
+
+h2 {
+    @include font-responsive(1.75rem, 2.5rem);
+    font-weight: $fw-semibold;
+}
+
+h3 {
+    @include font-responsive(1.5rem, 2rem);
+    font-weight: $fw-semibold;
+}
+
+h4 {
+    @include font-responsive(1.25rem, 1.5rem);
+}
+
+p {
+    font-size: $fs-base;
+    color: $text-gray;
+    line-height: 1.7;
+}
