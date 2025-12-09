@@ -1,0 +1,56 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.features {
+        @include section-padding;
+
+        .container {
+            .row {
+                .feature-card {
+                    >div {
+                        flex-direction: column;
+                        padding: 25px;
+
+                        i {
+                            color: $color-primary;
+                            margin-bottom: 20px;
+                            font-size: 35px;
+                        }
+
+                        h3 {
+                            color: $text-dark;
+                            font-size: 1rem;
+                        }
+
+                        p {
+                            color: $text-gray;
+                            text-align: center;
+                            width: 230px;
+                            font-size: .8rem;
+                        }
+
+
+                    }
+
+                    &:nth-child(2) {
+                        box-shadow: $shadow-sm;
+
+                        @include respond("md") {
+                            box-shadow: $shadow-md;
+                        }
+
+                        @include respond("lg") {
+                            box-shadow: $shadow-lg;
+                        }
+                    }
+
+                    @include respond("md") {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

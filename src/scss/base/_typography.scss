@@ -15,18 +15,21 @@ $fs-xxl: 3rem;
 // Heading Styles
 // ================================
 h1 {
-    @include font-responsive(2rem, 3rem);
     font-weight: $fw-bold;
+    @include font-responsive(2rem, 3rem);
+
 }
 
 h2 {
-    @include font-responsive(1.75rem, 2.5rem);
     font-weight: $fw-semibold;
+    @include font-responsive(1.75rem, 2.5rem);
+
 }
 
 h3 {
-    @include font-responsive(1.5rem, 2rem);
     font-weight: $fw-semibold;
+    @include font-responsive(1.5rem, 2rem);
+
 }
 
 h4 {

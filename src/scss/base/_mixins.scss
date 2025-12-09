@@ -69,16 +69,16 @@
 // ================================
 // Shadow Mixin
 // ================================
-@mixin shadow($level: md) {
+@mixin shadow($level: "md") {
     @if $level ==sm {
         box-shadow: $shadow-sm;
     }
 
-    @else if $level ==md {
+    @else if $level =="md" {
         box-shadow: $shadow-md;
     }
 
-    @else if $level ==lg {
+    @else if $level =="lg" {
         box-shadow: $shadow-lg;
     }
 }
@@ -89,7 +89,7 @@
 @mixin section-padding {
     padding-block: $space-xl;
 
-    @include respond(md) {
+    @include respond("md") {
         padding-block: $space-lg;
     }
 }
@@ -99,6 +99,7 @@
 // Responsive Font Mixin
 // ================================
 @mixin font-responsive($font-sm, $font-lg) {
+
     font-size: $font-sm;
 
     @include respond("md") {
