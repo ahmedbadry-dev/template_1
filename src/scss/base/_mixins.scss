@@ -1,0 +1,95 @@
+@use 'variables' as *;
+
+// ================================
+// Responsive Mixin
+// ================================
+@mixin respond($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (min-width: $bp-sm) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: $bp-md) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: $bp-lg) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: $bp-xl) {
+            @content;
+        }
+    }
+}
+
+// ================================
+// Flexbox Center
+// ================================
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Flexbox (custom)
+@mixin flex($justify: flex-start, $align: stretch, $direction: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+// ================================
+// Button Mixin
+// ================================
+@mixin button($bg: $color-primary, $color: $color-white) {
+    background: $bg;
+    color: $color;
+    padding: 0.75rem 1.6rem;
+    border-radius: $radius-md;
+    cursor: pointer;
+    border: none;
+    font-weight: $fw-medium;
+    transition: 0.3s ease;
+
+    &:hover {
+        opacity: 0.9;
+        box-shadow: $shadow-sm;
+    }
+}
+
+// ================================
+// Shadow Mixin
+// ================================
+@mixin shadow($level: md) {
+    @if $level ==sm {
+        box-shadow: $shadow-sm;
+    }
+
+    @else if $level ==md {
+        box-shadow: $shadow-md;
+    }
+
+    @else if $level ==lg {
+        box-shadow: $shadow-lg;
+    }
+}
+
+// ================================
+// Container Padding Fix
+// ================================
+@mixin section-padding {
+    padding-block: $space-xl;
+
+    @include respond(md) {
+        padding-block: $space-lg;
+    }
+}

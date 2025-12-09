@@ -44,7 +44,7 @@
 // .col-1 to col-12 => width percentage
 @for $i from 1 through 12 {
     .col-#{$i} {
-        width: (100% / 12) * $i;
+        width: calc((100% / 12) * $i);
     }
 }
 
@@ -57,7 +57,7 @@
 @media (min-width: $bp-sm) {
     @for $i from 1 through 12 {
         .col-sm-#{$i} {
-            width: (100% / 12) * $i;
+            width: calc((100% / 12) * $i);
         }
     }
 }
@@ -65,7 +65,7 @@
 @media (min-width: $bp-md) {
     @for $i from 1 through 12 {
         .col-md-#{$i} {
-            width: (100% / 12) * $i;
+            width: calc((100% / 12) * $i);
         }
     }
 }
@@ -73,7 +73,7 @@
 @media (min-width: $bp-lg) {
     @for $i from 1 through 12 {
         .col-lg-#{$i} {
-            width: (100% / 12) * $i;
+            width: calc((100% / 12) * $i);
         }
     }
 }
@@ -81,7 +81,7 @@
 @media (min-width: $bp-xl) {
     @for $i from 1 through 12 {
         .col-xl-#{$i} {
-            width: (100% / 12) * $i;
+            width: calc((100% / 12) * $i);
         }
     }
 }

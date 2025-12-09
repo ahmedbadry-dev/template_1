@@ -1,0 +1,106 @@
+@use './variables' as *;
+
+// ========================
+// Global Reset
+// ========================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-main;
+    background: $bg-light;
+    color: $text-dark;
+    line-height: 1.6;
+}
+
+// Remove list bullets
+ul {
+    list-style: none;
+}
+
+// Remove anchor underline
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// ========================
+// Global Utility Classes
+// ========================
+
+// Container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 15px;
+
+    @media (min-width: $bp-sm) {
+        max-width: 540px;
+    }
+
+    @media (min-width: $bp-md) {
+        max-width: 720px;
+    }
+
+    @media (min-width: $bp-lg) {
+        max-width: 960px;
+    }
+
+    @media (min-width: $bp-xl) {
+        max-width: 1140px;
+    }
+}
+
+// Section default padding
+.section {
+    padding-block: $space-xl;
+
+    @media (max-width: $bp-md) {
+        padding-block: $space-lg;
+    }
+}
+
+// Titles
+.section-title {
+    font-size: 2.2rem;
+    font-weight: $fw-bold;
+    margin-bottom: $space-md;
+    color: $text-dark;
+    text-align: center;
+}
+
+// Flex helpers
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Text alignment
+.text-center {
+    text-align: center;
+}
+
+// Image rules
+img {
+    max-width: 100%;
+    display: block;
+}
