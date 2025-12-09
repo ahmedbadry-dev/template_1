@@ -2,25 +2,27 @@
 // 12 Column Grid System
 // ============================
 
+@use "../base/variables" as *;
+
 // Container
 .container {
     width: 100%;
     margin: 0 auto;
     padding-inline: 15px;
 
-    @media (min-width: 576px) {
+    @media (min-width: $bp-sm) {
         max-width: 540px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $bp-md) {
         max-width: 720px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $bp-lg) {
         max-width: 960px;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $bp-xl) {
         max-width: 1140px;
     }
 }
@@ -52,7 +54,7 @@
 // col-lg-* => from 992px
 // col-xl-* => from 1200px
 
-@media (min-width: 576px) {
+@media (min-width: $bp-sm) {
     @for $i from 1 through 12 {
         .col-sm-#{$i} {
             width: (100% / 12) * $i;
@@ -60,7 +62,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $bp-md) {
     @for $i from 1 through 12 {
         .col-md-#{$i} {
             width: (100% / 12) * $i;
@@ -68,7 +70,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $bp-lg) {
     @for $i from 1 through 12 {
         .col-lg-#{$i} {
             width: (100% / 12) * $i;
@@ -76,7 +78,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $bp-xl) {
     @for $i from 1 through 12 {
         .col-xl-#{$i} {
             width: (100% / 12) * $i;
