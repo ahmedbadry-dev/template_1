@@ -1,0 +1,85 @@
+// ============================
+// 12 Column Grid System
+// ============================
+
+// Container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 15px;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+// Row
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -15px;
+}
+
+// Column Base Style
+[class*="col-"] {
+    padding-inline: 15px;
+    box-sizing: border-box;
+}
+
+//  Generate 12 columns
+// .col-1 to col-12 => width percentage
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: (100% / 12) * $i;
+    }
+}
+
+// Responsive Columns
+// col-sm-* => from 576px
+// col-md-* => from 768px
+// col-lg-* => from 992px
+// col-xl-* => from 1200px
+
+@media (min-width: 576px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            width: (100% / 12) * $i;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            width: (100% / 12) * $i;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            width: (100% / 12) * $i;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    @for $i from 1 through 12 {
+        .col-xl-#{$i} {
+            width: (100% / 12) * $i;
+        }
+    }
+}
