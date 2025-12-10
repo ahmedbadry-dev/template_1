@@ -1,0 +1,76 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.portfolio {
+        background-color: $bg-gray;
+        @include section-padding;
+
+        .container {
+            .row {
+                .projects-cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+
+                    .p-card {
+                        margin-bottom: 30px;
+                        cursor: pointer;
+
+                        figure {
+                            overflow: hidden;
+                            height: 210px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+
+                                transition: transform .4s ease;
+                                -webkit-transition: transform .4s ease;
+                                -moz-transition: transform .4s ease;
+                                -ms-transition: transform .4s ease;
+                                -o-transition: transform .4s ease;
+                            }
+                        }
+
+                        .p-card-info {
+                            padding: 10px;
+                            background-color: $color-white;
+
+                            h3 {
+                                font-size: 1rem;
+                                color: $text-dark;
+
+                            }
+
+                            p {
+                                font-size: .8rem;
+                                color: $text-gray;
+                            }
+                        }
+
+                        &:hover img {
+                            filter: blur(.5px);
+                            transform: scale(1.08);
+                            -webkit-transform: scale(1.08);
+                            -moz-transform: scale(1.08);
+                            -ms-transform: scale(1.08);
+                            -o-transform: scale(1.08);
+                            -webkit-filter: blur(.5px);
+                        }
+                    }
+                }
+
+                .show-btn {
+                    >button {
+                        padding: 10px 20px;
+                        font-weight: $fw-medium;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
