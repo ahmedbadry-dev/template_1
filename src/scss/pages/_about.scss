@@ -1,0 +1,90 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.about {
+        @include section-padding;
+
+        .container {
+            .row {
+                .content {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding-top: 60px;
+                    width: 100%;
+
+                    figure {
+                        position: relative;
+                        display: none;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+
+
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -20px;
+                            right: -90px;
+                            height: 70%;
+                            width: 78px;
+                            color: black;
+                            border-left: 70px solid $color-primary;
+                            border-bottom: 55px solid $color-primary;
+                            z-index: -1;
+                        }
+
+                        @include respond("md") {
+                            display: block;
+                        }
+                    }
+
+                    .about-info {
+                        p {
+                            color: $text-dark;
+                            font-weight: $fw-semibold;
+                            max-width: 400px;
+                            text-align: justify;
+                        }
+
+                        & p:last-of-type {
+                            font-size: .8rem;
+                            color: $text-gray;
+                        }
+
+                        hr {
+                            margin: 20px 0;
+                            width: 50%;
+                            border: none;
+                            border-bottom: 3px solid #3cddcb;
+                            align-self: flex-start;
+                        }
+
+                        @include respond("md") {
+                            padding-left: 170px;
+
+                            p {
+                                width: 330px;
+                            }
+
+                        }
+
+                        @include respond("lg") {
+                            padding-left: 100px;
+
+                            p {
+                                width: 400px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
