@@ -1,0 +1,62 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    section.contact {
+        background-color: $bg-gray;
+        @include section-padding;
+
+        .container {
+            .row {
+                .content {
+                    padding-top: 60px;
+                    text-align: center;
+
+                    h2 {
+                        color: #124f69;
+                        font-weight: $fw-bold;
+                    }
+
+                    address {
+                        a {
+                            color: $color-primary;
+                        }
+                    }
+
+                    .media-icons {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding-top: 20px;
+
+                        p {
+                            font-size: .8rem;
+
+                        }
+
+                        i {
+                            cursor: pointer;
+                        }
+                    }
+
+                    @include respond("md") {
+                        text-align: start;
+
+                        address {
+                            a {
+                                padding-left: 20px;
+                                color: $color-primary;
+                            }
+                        }
+
+                        .media-icons {
+                            padding-left: 60px;
+                            justify-content: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

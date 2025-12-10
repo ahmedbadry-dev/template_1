@@ -698,22 +698,30 @@ img {
     display: block;
   }
 }
+.page section.about .container .row .content .about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .page section.about .container .row .content .about-info p {
   color: #111827;
   font-weight: 600;
   max-width: 400px;
   text-align: justify;
+  position: relative;
+}
+.page section.about .container .row .content .about-info p:first-of-type::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  left: 0;
+  bottom: -20px;
+  border-bottom: 3px solid #3cddcb;
 }
 .page section.about .container .row .content .about-info p:last-of-type {
   font-size: 0.8rem;
   color: #A1A5A3;
-}
-.page section.about .container .row .content .about-info hr {
-  margin: 20px 0;
-  width: 50%;
-  border: none;
-  border-bottom: 3px solid #3cddcb;
-  align-self: flex-start;
+  margin-top: 40px;
 }
 @media (min-width: 768px) {
   .page section.about .container .row .content .about-info {
@@ -759,5 +767,52 @@ img {
   .page h2.special-heading + p {
     margin-top: -80px;
     font-size: 1.125rem;
+  }
+}
+
+.page section.contact {
+  background-color: #f3f4f6;
+  padding-block: 5rem;
+}
+@media (min-width: 768px) {
+  .page section.contact {
+    padding-block: 3rem;
+  }
+}
+.page section.contact .container .row .content {
+  padding-top: 60px;
+  text-align: center;
+}
+.page section.contact .container .row .content h2 {
+  color: #124f69;
+  font-weight: 700;
+}
+.page section.contact .container .row .content address a {
+  color: #34BCAC;
+}
+.page section.contact .container .row .content .media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.page section.contact .container .row .content .media-icons p {
+  font-size: 0.8rem;
+}
+.page section.contact .container .row .content .media-icons i {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .page section.contact .container .row .content {
+    text-align: start;
+  }
+  .page section.contact .container .row .content address a {
+    padding-left: 20px;
+    color: #34BCAC;
+  }
+  .page section.contact .container .row .content .media-icons {
+    padding-left: 60px;
+    justify-content: start;
   }
 }
