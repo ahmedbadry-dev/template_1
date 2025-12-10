@@ -204,6 +204,19 @@ img {
   }
 }
 
+.page footer {
+  background-color: #111827;
+  padding: 20px 0;
+}
+.page footer .container .row p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+.page footer .container .row p span {
+  color: #34BCAC;
+  font-weight: 700;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -780,7 +793,7 @@ img {
   }
 }
 .page section.contact .container .row .content {
-  padding-top: 60px;
+  padding: 60px 0;
   text-align: center;
 }
 .page section.contact .container .row .content h2 {

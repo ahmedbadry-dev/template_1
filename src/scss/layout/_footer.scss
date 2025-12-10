@@ -1,0 +1,23 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.page {
+    footer {
+        background-color: $bg-dark;
+        padding: 20px 0;
+
+        .container {
+            .row {
+                p {
+                    text-align: center;
+                    font-size: .9rem;
+
+                    span {
+                        color: $color-primary;
+                        font-weight: $fw-bold;
+                    }
+                }
+            }
+        }
+    }
+}
