@@ -616,10 +616,31 @@ img {
   -o-transform: scale(1.08);
   -webkit-filter: blur(0.5px);
 }
-.page section.portfolio .container .row .show-btn > button {
+.page section.portfolio .container .row .show-btn > a {
   padding: 10px 20px;
   font-weight: 500;
   cursor: pointer;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  transition: left 0.4s ease, opacity 0.4s ease;
+}
+.page section.portfolio .container .row .show-btn > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #34BCAC;
+  width: 0;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  -webkit-transition: width 0.4s ease, opacity 0.4s ease;
+  -moz-transition: width 0.4s ease, opacity 0.4s ease;
+  -ms-transition: width 0.4s ease, opacity 0.4s ease;
+  -o-transition: width 0.4s ease, opacity 0.4s ease;
+}
+.page section.portfolio .container .row .show-btn > a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .page section.features {
@@ -751,6 +772,37 @@ img {
   .page section.about .container .row .content .about-info p {
     width: 400px;
   }
+}
+
+.page .portfolio-landing {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-image: url("../src/assets/images/portfolio/m18.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+.page .intro-box {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 550px;
+}
+.page .intro-box p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+.page .intro-box h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a9a9d;
 }
 
 .page h2.special-heading {
