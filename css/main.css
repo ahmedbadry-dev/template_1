@@ -137,19 +137,19 @@ img {
   display: block;
 }
 
-.page .container header {
-  height: 70px;
+.page header .container .row .content {
+  padding: 15px;
 }
-.page .container header figure img {
+.page header .container .row .content figure img {
   width: 40px;
 }
-.page .container header nav {
+.page header .container .row .content nav {
   position: relative;
 }
-.page .container header nav i {
+.page header .container .row .content nav i {
   cursor: pointer;
 }
-.page .container header nav:hover ul {
+.page header .container .row .content nav:hover ul {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -158,12 +158,12 @@ img {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
 }
-.page .container header nav ul {
+.page header .container .row .content nav ul {
   position: absolute;
   top: 40px;
   right: 0;
   width: 300px;
-  background-color: #eee;
+  background-color: #f3f4f6;
   padding: 15px;
   opacity: 0;
   pointer-events: none;
@@ -175,7 +175,7 @@ img {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
-.page .container header nav ul::before {
+.page header .container .row .content nav ul::before {
   content: "";
   position: absolute;
   border: 10px solid transparent;
@@ -183,7 +183,7 @@ img {
   right: 5px;
   border-bottom-color: #eee;
 }
-.page .container header nav ul li {
+.page header .container .row .content nav ul li {
   padding: 0.5rem 0;
   transition: padding 0.3s;
   -webkit-transition: padding 0.3s;
@@ -192,14 +192,14 @@ img {
   -o-transition: padding 0.3s;
   cursor: pointer;
 }
-.page .container header nav ul li:not(:last-child) {
+.page header .container .row .content nav ul li:not(:last-child) {
   border-bottom: 1px solid rgb(207, 207, 207);
 }
-.page .container header nav ul li:hover {
+.page header .container .row .content nav ul li:hover {
   padding-left: 15px;
 }
 @media (min-width: 768px) {
-  .page .container header nav ul {
+  .page header .container .row .content nav ul {
     width: 500px;
   }
 }
